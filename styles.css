@@ -8,6 +8,7 @@
 
 body {
 	height: 100vh;
+	color: #eee;
 	background: #673ab7; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
 		to right,
@@ -19,4 +20,97 @@ body {
 		#512da8,
 		#673ab7
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+main {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.calculator {
+	width: 500px;
+	height: 750px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	border: 2px solid black;
+	border-radius: 0.7em;
+	background-color: #333;
+}
+
+.screen {
+	margin-top: 20px;
+	width: 90%;
+	padding: 2rem 10rem;
+	border: 2px solid black;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	word-wrap: break-word;
+	word-break: break-all;
+	background: #673ab7; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#512da8,
+		#673ab7
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #512da8, #673ab7);
+}
+
+.screen-current {
+	margin-left: 15rem;
+	font-size: 40px;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+}
+
+.btn {
+	padding: 1.5rem 5.5rem;
+	border-radius: 0.7em;
+	border: 3px solid black;
+	outline: none;
+	cursor: pointer;
+}
+
+.btn-clear,
+.btn-delete {
+	background-color: #673ab7;
+	color: inherit;
+	transition: 1s;
+}
+
+.btn-clear:hover,
+.btn-delete:hover {
+	background-color: #512da8;
+}
+
+.btn-numbers__container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1rem;
+	margin-top: 1rem;
+	width: 90%;
+}
+
+.num,
+.operator {
+	padding: 2rem 2rem;
+	border-radius: 0.3em;
+	border: 2px solid #000;
+	display: flex;
+	justify-content: center;
+	background-color: #512da8;
+	cursor: pointer;
+	transition: 1s;
+	font-size: 2rem;
+}
+.num:hover,
+.operator:hover {
+	background-color: #673ab7;
 }
